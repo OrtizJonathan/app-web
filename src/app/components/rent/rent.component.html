@@ -1,0 +1,51 @@
+<nav class="nav-extended">
+    <div class="nav-content primario">
+        <ul class="tabs tabs-transparent">
+            <li class="tab"><a>Saga Falabella</a></li>
+            <li class="tab"><a>Viajes Falabella</a></li>
+            <li class="tab"><a>Seguros Falabella</a></li>
+            <li class="tab"><a>Sodimac</a></li>
+            <li class="tab"><a>Tottus</a></li>
+            <li class="tab"><a>Maestro</a></li>
+        </ul>
+    </div>
+    <div class="nav-wrapper secundario">
+        <div class="ocultar"><a><i class="large material-icons">menu</i></a></div>
+        <div><a class="brand-logo center">
+            <img src="../assets/images/logo-banco-falabella.png" width="150" height="auto">
+        </a></div>
+    </div>
+</nav>
+
+<div class="cajaRent">
+    <div class="row">
+        <div class="container">
+            <div class="col s12 m5 l6"></div>
+            <div class="col s12 m7 l6">
+                <div class="card">
+                    <div class="container">
+                        <div class="card-content">
+                            <h5><span class="ingreso">Ayúdanos</span> con unos datos más.</h5>
+                            <br>
+                            <p>Porque te queremos dar una oferta hecha a la medida para ti, necesitamos saber un poco
+                                más</p>
+                            <br>
+                            <form [formGroup]="angForm" (ngSubmit)="onConsult()" novalidate>
+                                <div class="form-group">
+                                    <label class="center-block">¿Cuál es tu renta líquida/ingreso mensual?
+                                        <input class="form-control" formControlName="renta" placeholder="Ej. 400.000" />
+                                    </label>
+                                </div>
+                                <br>
+                                <button [disabled]="!angForm.valid" class="waves-effect waves-light btn col s12"
+                                    type="submit">
+                                    Continuar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

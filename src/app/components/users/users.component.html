@@ -1,0 +1,81 @@
+<nav>
+    <div class="nav-wrapper">
+        <div class="ocultar"><a><i class="large material-icons">menu</i></a></div>
+        <a class="brand-logo center">
+            <img src="../assets/images/logo-banco-falabella.png" width="150" height="auto">
+        </a>
+    </div>
+</nav>
+<div class="cajaUser">
+    <div class="row">
+        <div class="row col s12 m5 l6">
+            <div class="col s12 m12 l6">
+                <div class="movil-h4">
+                    <span class="flotante">Tu Cuenta Corriente</span>
+                    <span class="flotante nr"> 100% on line</span>
+                </div>
+            </div>               
+            <div class="col s12 m12 l12 ocultar fix-tarjetas">   
+                <div class="card-panel div-tarjetas z-depth-1">
+                    <div class="row valign-wrapper">
+                        <div class="col s2 m2 l2">
+                            <img src="../../../assets/images/ico-cmr.png" alt="" class="responsive-img">
+                        </div>
+                        <div class="col s2 m2 l2">
+                            <span class="black-text">
+                                Acumula CMR Puntos.
+                            </span>
+                        </div>                            
+                        <div class="col s2 m2 l2">
+                            <img src="../../../assets/images/opu.png" alt="" class="responsive-img">
+                        </div>
+                        <div class="col s2 m2 l2">
+                            <span class="black-text">
+                                Descuentos exclusivos.
+                            </span>
+                        </div>
+                        <div class="col s2 m2 l2">
+                            <img src="../../../assets/images/visa-blue-png-2.png" alt="" class="responsive-img">
+                        </div>
+                        <div class="col s2 m2 l2">
+                            <span class="black-text">
+                                Compra en todo el mundo.
+                            </span>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </div>
+        <div class="container">
+            <div class="col s12 m7 l6">
+                <div class="card recuadro">
+                    <div class="container">
+                        <div class="card-content">
+                            <h5><span class="ingreso">Ingresa</span> tus datos.</h5>
+                            <br>
+                            <p>Solo necesitas tener tu cédula para tener la solicitud</p>
+                            <br>
+                            <form [formGroup]="angForm" (ngSubmit)="onContinue()" novalidate>
+                                <div class="form-group">
+                                    <label class="center-block">Rut
+                                        <input class="form-control" formControlName="rut" placeholder="Ej. 11.111.111-1"/>
+                                    </label>
+                                    <label class="center-block">Celular
+                                        <input class="form-control" formControlName="celular" placeholder="Ej. correo@correo.cl"/>
+                                    </label>
+                                    <label class="center-block">Correo electrónico
+                                        <input class="form-control" formControlName="correo" placeholder="Ej. correo@correo.cl"/>
+                                    </label>
+                                </div>
+                                <br>
+                                <button [disabled]="!angForm.valid" class="waves-effect waves-light btn col s12" type="submit">
+                                    Continuar
+                                </button>    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>      
+</div>
